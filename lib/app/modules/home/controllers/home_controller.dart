@@ -32,18 +32,9 @@ class HomeController extends GetxController {
   }
 
   getWeather(city) async {
-    // print(city);
- WeatherApiService().request(city);
-    // print(weatherData);
-    // condition=weatherData
-    temp;
-    feelsLike;
-    pressure;
-    visibility;
-    humidity;
-    windSpeed;
-    // country = weatherData['country'];
-    name;
-    icon;
+    final weather = await WeatherApiService().request(city);
+    // // print(weather);
+    // final weatherfromapi = weatherModelFromJson(weather);
+    // print(weatherfromapi);
   }
 }

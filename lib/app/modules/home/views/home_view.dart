@@ -46,7 +46,7 @@ class HomeView extends GetView<HomeController> {
                           delegate: MySearchDelegate(),
                         );
                       },
-                      icon:  const Icon(Icons.search))
+                      icon: const Icon(Icons.search))
                 ],
               ),
               Row(
