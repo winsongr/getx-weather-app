@@ -52,7 +52,7 @@ class MySearchDelegate extends SearchDelegate {
           onTap: () async {
             query = suggestion;
             showResults(context);
-            HomeController().getWeather(query);
+            print(query);
             Get.to(() => HomeView(
                   city: query,
                 ));

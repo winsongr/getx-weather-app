@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wweather/app/data/api_model.dart';
-import 'package:wweather/app/data/api_services.dart';
 
 class HomeController extends GetxController {
   RxString? city = 'coimbatore'.obs;
@@ -23,18 +20,5 @@ class HomeController extends GetxController {
 
   Future updateTemp(newTemp) async {
     temp?.value = newTemp;
-  }
-
-  @override
-  void onInit() {
-    getWeather(city);
-    super.onInit();
-  }
-
-  getWeather(city) async {
-    final weather = await WeatherApiService().request(city);
-    // // print(weather);
-    // final weatherfromapi = weatherModelFromJson(weather);
-    // print(weatherfromapi);
   }
 }
